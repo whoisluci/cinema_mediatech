@@ -49,7 +49,7 @@ netflixButton.addEventListener("click", function () {
 
 documentBody.innerHTML = `
 <div id="moviecontainer">
-    <div id="exitSign"><img src="media/images/emergency_exit_sign.png"></div>
+    <div id="exitSign"><img id="exitSignPNG" src="media/images/emergency_exit_sign.png"></div>
     <video id="moviescreen" controls autoplay loop>
         <source src="media/images/pexels-cottonbro-9208700 (2160p).mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -82,8 +82,8 @@ documentBody.innerHTML = `
         }, 500); // Adjust the interval (milliseconds) to control the blinking speed
       });
 
-
-      exitSign.addEventListener("click", function () {
+      let exitSignPNG = document.querySelector("#exitSignPNG");
+      exitSignPNG.addEventListener("click", function () {
         console.log("ja d syns");
         documentBody.innerHTML = `
         <h1>
