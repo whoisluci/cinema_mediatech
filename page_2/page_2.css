@@ -1,108 +1,108 @@
 
-  #bubblecontainer {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-  
-  .bubblebox {
-    height: 500px;
-    width: 500px;
-  }
-  
-  #bubble1 {
-    grid-row: 1;
-    grid-column: 3;
-  }
-  
-  #bubble3 {
-    grid-column: 4;
-  }
-  
-  #bubblesmall {
-    height: 200px;
-    width: 200px;
-  }
-  
-  #bubble1 p {
-  font-size: 18px;
+#bubblecontainer {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.bubblebox {
+  height: 500px;
+  width: 500px;
+}
+
+#bubble1 {
+  grid-row: 1;
+  grid-column: 3;
+}
+
+#bubble3 {
+  grid-column: 4;
+}
+
+#bubblesmall {
+  height: 200px;
+  width: 200px;
+}
+
+#bubble1 p {
+font-size: 18px;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+position: relative;
+bottom: 131px;
+text-align: center;
+color: black;
+left: -73px;
+}
+
+#bubble2 p {
+font-size: 20px;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+position: relative;
+bottom: 300px;
+text-align: center;
+color: black;
+}
+
+#bubble3 p {
+  font-size: 25px;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   position: relative;
-  bottom: 131px;
-  text-align: center;
-  color: black;
-  left: -73px;
-  }
-  
-  #bubble2 p {
-  font-size: 20px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  position: relative;
-  bottom: 100px;
+  bottom: 350px;
   text-align: center;
   color: black;
   }
-  
-  #bubble3 p {
-    font-size: 25px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    position: relative;
-    bottom: 350px;
-    text-align: center;
-    color: black;
-    }
-  
-  #moviecontainer {
-    height: 250px;
-    overflow: hidden; 
-    display: grid;
-    grid-template-columns: 180px 180px 1fr 100px;
-  }
-  
-  #moviescreen {
-    width: 100%; 
-    height: 100%;
-    object-fit: cover ;
-    object-position: bottom;
-    border-radius: 0 0 10px 10px;
-    grid-column: 3;
-    background:var(--url) no-repeat;
-    background-size: contain;
-  } 
 
-  #exitSign {
-    width: 100px; 
-    object-fit: cover ;
-    object-position: bottom;
-    border-radius: 0 0 10px 10px;
-    grid-column: 2;
-    margin: auto;
-    animation: glow 1s ease-in-out infinite alternate;
-  }
+#moviecontainer {
+  height: 250px;
+  overflow: hidden; 
+  display: grid;
+  grid-template-columns: 180px 180px 1fr 100px;
+}
 
-  #exitSign img {
-    animation: blink 1.5s infinite; /* Adjust animation duration as needed */
+#moviescreen {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover ;
+  object-position: bottom;
+  border-radius: 0 0 10px 10px;
+  grid-column: 3;
+  background:var(--url) no-repeat;
+  background-size: contain;
+} 
+
+#exitSign {
+  width: 100px; 
+  object-fit: cover ;
+  object-position: bottom;
+  border-radius: 0 0 10px 10px;
+  grid-column: 2;
+  margin: auto;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+#exitSign img {
+  animation: blink 1.5s infinite; /* Adjust animation duration as needed */
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
   }
 
-  @keyframes blink {
-    0%,
-    100% {
-      opacity: 0;
-    }
-  
-    50% {
-      opacity: 1;
-    }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 5px #04a454) drop-shadow(0 0 5px #7cd4a4);
   }
 
-  @keyframes glow {
-    from {
+  to {
       filter: drop-shadow(0 0 5px #04a454) drop-shadow(0 0 5px #7cd4a4);
-    }
-
-    to {
-        filter: drop-shadow(0 0 5px #04a454) drop-shadow(0 0 5px #7cd4a4);
-    }
+  }
 }
