@@ -8,11 +8,11 @@ HTML {
 }
 
 #vibePage {
-  
   background-image: url(media/images/filmrulle.jpg);
   background-attachment: fixed;
   text-align: center;
   height: 100vh;
+  position: relative; /* Make the #vibePage container a positioning context */
 }
 
 .screenboard {
@@ -20,12 +20,30 @@ HTML {
   display: inline-block;
   line-height: 1;
   margin: 0 1em 1em 0;
-  position: relative;
+  position: absolute; /* Use absolute positioning for the screenboards */
   text-align: center;
   text-transform: uppercase;
   width: 250px;
   z-index: 0;
 }
+
+/* Update the styles for each screenboard */
+.screenboard:nth-child(1) {
+  top: 10%;
+  left: 10%;
+}
+
+.screenboard:nth-child(2) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the screenboard */
+}
+
+.screenboard:nth-child(3) {
+  bottom: 10%;
+  right: 10%;
+}
+
 .screenboard::before,
 .screenboard::after {
   border: 2px outset #f00;
