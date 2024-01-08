@@ -1,0 +1,182 @@
+@font-face {
+    font-family: sacra;
+    src: url(../fonts/Sacramento-Regular.ttf);
+}
+@font-face {
+    font-family: filmstrip;
+    src: url(../fonts/ACFilmstrip.otf);
+}
+
+body {
+    background-image: url("../images/movieposters.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#homeline {
+    font-family: filmstrip;
+    font-size: 72px;
+    z-index: 2;
+}
+
+#evolving {
+    font-family: sacra;
+    font-size: 35px;
+    text-align: center;
+}
+
+h2 {
+    font-family: sacra;
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}
+
+#infocontainer {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    text-align: center;
+    z-index: 3;
+}
+
+.slide-in {
+    position: fixed;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.top-left {
+    left: -100%;
+    top: -100%;
+    animation-name: slideTopLeft;
+}
+
+.bottom-left {
+    left: -100%;
+    bottom: -100%;
+    animation-name: slideBottomLeft;
+}
+
+.top-right {
+    right: -100%;
+    top: -100%;
+    animation-name: slideTopRight;
+    padding-right: 20px;
+}
+
+.bottom-right {
+    right: -100%;
+    bottom: -100%;
+    animation-name: slideBottomRight;
+}
+
+@keyframes slideTopLeft {
+    to {
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes slideBottomLeft {
+    to {
+        left: 0;
+        bottom: 0;
+    }
+}
+
+@keyframes slideTopRight {
+    to {
+        right: 0;
+        top: 0;
+    }
+}
+
+@keyframes slideBottomRight {
+    to {
+        right: 0;
+        bottom: 0;
+    }
+}
+
+img {
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+}
+
+.popcorn-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.popcorn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    animation: fallingPopcorn linear infinite 10s;
+    z-index: 0;
+}
+
+
+
+@keyframes fallingPopcorn {
+    0% {
+        transform: translateY(-100vh) translateX(0);
+    }
+    100% {
+        transform: translateY(100vh) translateX(0);
+    }
+}
+
+/* Add this style for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3; /* Set a higher z-index than other elements on the page */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+}
+
+/* Style the modal content */
+.modal-content {
+    background-color: #fefefe8f;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the close button inside the modal */
+.close {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff0000;
+    text-decoration: none;
+    cursor: pointer;
+}

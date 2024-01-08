@@ -45,7 +45,6 @@ documentBody.innerHTML = `
 
 let netflixButton = document.querySelector(".btn-lg");
 netflixButton.addEventListener("click", function () {
-    console.log("Hej");
 
 documentBody.innerHTML = `
 <div id="moviecontainer">
@@ -73,7 +72,7 @@ documentBody.innerHTML = `
     documentBody.style.height = '100vh';
     documentBody.style.margin = '0';
 
-    let exitSign = document.getElementById("exitSign");
+    let exitSign = document.getElementById("exitSignPNG");
     document.addEventListener("DOMContentLoaded", function() {
   
         setInterval(function() {
@@ -82,8 +81,7 @@ documentBody.innerHTML = `
         }, 500); // Adjust the interval (milliseconds) to control the blinking speed
       });
 
-      let exitSignPNG = document.querySelector("#exitSignPNG");
-      exitSignPNG.addEventListener("click", function () {
+    exitSign.addEventListener("click", function () {
         console.log("ja d syns");
         documentBody.innerHTML = `
         <h1>
@@ -118,7 +116,9 @@ documentBody.innerHTML = `
         // Append the link element to the head of the document
         document.head.appendChild(linkElement);
       });
-});
+    }); 
+
+
 
 
 

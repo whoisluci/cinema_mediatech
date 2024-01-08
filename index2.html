@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Single Page App</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="netflix.css">
+  <link rel="stylesheet" href="reviews.css">
+  <link rel="stylesheet" href="events.css">
+  <style>
+    /* Add your common styles here */
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Button Section -->
+  <div id="buttons">
+    <button onclick="showPage('homePage')">Home</button>
+    <button onclick="showPage('netflixPage')">Netflix</button>
+    <button onclick="showPage('reviewsPage')">Reviews</button>
+  </div>
+
+  <!-- Page Content Section -->
+  <div id="homePage" class="hidden">
+    <!-- Home Page Content -->
+    <div class="starterPage" id="oldContent">
+      <header></header>
+      <div id="stage">
+        <div id="curtain-left" class="curtain"></div>
+        <div id="curtain-right" class="curtain"></div>
+        <div class="spotlight"></div>
+        <video autoplay loop muted id="homepageVideo">
+          <source src="./media/videos/Mediateknik.mp4" type="video/mp4">  
+        </video>
+        <div class="art">
+          <h1>Is the art of cinema dead?</h1>
+          <div class="button-container">
+            <button class="button" id="yesButton" onclick="showPage('netflixPage')">YES</button>
+            <button class="button" id="noButton" onclick="showPage('eventsPage')">NO</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="netflixPage" class="hidden">
+    <!-- Netflix Page Content -->
+    <div class="outer-container">
+      <header class="header">
+        <nav class="logo">
+          <img src="https://i.ibb.co/r5krrdz/logo.png" alt="Netflix" />
+          <a href="" class="btn"> Sign In</a>
+        </nav>
+        <div class="inner-container">
+          <div class="inner-title">
+            <h1>Streaming sites take over.</h1>
+          </div>
+          <div class="inner-text">
+            <p>Watch anywhere. Cancel anytime.</p>
+          </div>
+          <div class="email-form">
+            <p>
+              Ready to watch? Enter your email to create or restart your
+              membership.
+            </p>
+            <div class="get-started">
+              <input type="text" name="" id="" placeholder="Email address" />
+              <a href="" class="btn-lg">Get started <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+          <div id="trendingNow">
+            <h1 id="myList">Trending Now</h1>
+            <div class="box">
+              <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t1.PNG?raw=true" alt=""></a>
+              <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t2.PNG?raw=true" alt=""></a>
+              <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t3.PNG?raw=true" alt=""></a>
+              <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t4.PNG?raw=true" alt=""></a>
+              <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t5.PNG?raw=true" alt=""></a>
+              <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t6.PNG?raw=true" alt=""></a>    
+            </div>     
+          </div>
+        </div>
+        <div class="overlay"></div>
+      </header>   
+    </div>
+  </div>
+
+  <div id="reviewsPage" class="hidden">
+    <!-- Reviews Page Content -->
+    <h1>Movie Reviews</h1>
+    <div class="review-container">
+      <div class="review">
+        <h2>Movie Title 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit....</p>
+      </div>
+      <div class="review">
+        <h2>Movie Title 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit....</p>
+      </div>
+      <!-- Add more reviews as needed -->
+    </div>
+  </div>
+
+  <!-- Events Page Content -->
+<div id="eventsPage" class="hidden">
+    <link rel="stylesheet" href="events.css"> <!-- Include specific CSS file for EventPage -->
+    <video autoplay muted loop id="myVideo">
+      <source src="media/videos/slide_video.mp4" type="video/mp4">
+    </video>
+    <div class="title">
+      <h1>QUIET? NO</h1>
+    </div>
+    <!-- Use a button to pause/play the video with JavaScript 
+    <button id="myBtn" onclick="myFunction()">Pause</button> -->
+    <div class="info_box">
+      <h1>INFO</h1>
+      <p>här ska det finnas information</p>
+    </div> 
+    <div class="image-container">
+      <a href="#" onclick="showPage('evolvingPage')">
+        <img src="media/images/taylor_swift.png" alt="Taylor Swift">
+      </a>
+    </div>
+  </div>
+  
+
+  <div id="evolvingPage" class="hidden">
+    <div id="infocontainer">
+        <h1 id="homeline">Bring <br> home <br> out</h1>
+        <p id="evolving"> Always evolving... <br>Click on pictures for info!</p>
+    </div>
+    
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Now in theaters everywhere... </h2>
+            <p>Enjoying a glas of wine or a beer while watching a movie is absolutely something thats been missing from the cinema scene. However lately it´s been popping up more and more theaters serving alcohol and it´s bringing more people! </p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>No wait when there is a waiter</h2>
+            <p>When theaters started serving food and alcohol inevitable of course bartenders and waiters was part of the deal. Being able to slink away from your seat to order a cocktail from the bar inside the salon is luxury. Having a waiter bring your food to the seat is a reason to move from the tv-screen to the movie-screen. </p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Netflix and chill?</h2>
+            <p>A big reason for people liking the homescene more than the theaterscene is the comfort of your own bed. So theaters began to upgrade their seats, making them more comfortable! Some theaters even have actual beds! </p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal4">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Popcorn? No! Burgers!</h2>
+            <p>Serving food in theaters has become quite popular. Enjoying a burger, pasta or some cheese while wathing a movie is absolutely a hit! You can combine eating out with going to the movies, which seems like the perfect date! Some theaters have even taken it to the next step makeing food according to the movie. You eat what they eat in the movie for an example the famous ratatouille from the movie Ratatouille.</p>
+        </div>
+    </div>
+
+    <div class="slide-in top-left" onclick="openModal('modal1')">
+        <img src="../images/beer.png" alt="Image 1">
+    </div>
+
+    <div class="slide-in bottom-left" onclick="openModal('modal2')">
+        <img src="../images/waiter.png" alt="Image 2">
+    </div>
+
+    <div class="slide-in top-right" onclick="openModal('modal3')">
+        <img src="../images/bed.png" alt="Image 3">
+    </div>
+
+    <div class="slide-in bottom-right" onclick="openModal('modal4')">
+        <img src="../images/burger.png" alt="Image 4">
+    </div>
+    
+    <div class="popcorn-container">
+        <div class="popcorn"></div>
+    </div>
+  </div>
+
+
+  <script src="evolving.js"></script>
+  <script src="index.js"></script>
+  <script>
+    // JavaScript to show and hide pages
+    function showPage(pageId) {
+      // Hide all pages
+      const pages = document.querySelectorAll('.hidden');
+      pages.forEach(page => page.style.display = 'none');
+
+      // Show the selected page
+      document.getElementById(pageId).style.display = 'block';
+    }
+
+    // Call showPage function with 'homePage' on page load
+    window.onload = function() {
+      showPage('homePage');
+    };
+  </script>
+</body>
+</html>
