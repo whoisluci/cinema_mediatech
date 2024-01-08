@@ -7,16 +7,16 @@
     src: url(../fonts/ACFilmstrip.otf);
 }
 
-body {
-    background-image: url("../images/movieposters.png");
+#evolvingPage {
+    background-image: url("media/images/movieposters.png");
     background-size: 100%;
     background-repeat: no-repeat;
-    overflow: hidden;
-    height: 100vh;
+    /* overflow: hidden;
+    height: 100vh; */
     margin: 0px;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 #homeline {
