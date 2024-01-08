@@ -1,10 +1,10 @@
 @font-face {
     font-family: sacra;
-    src: url(../fonts/Sacramento-Regular.ttf);
+    src: url(media/fonts/Sacramento-Regular.ttf);
 }
 @font-face {
     font-family: filmstrip;
-    src: url(../fonts/ACFilmstrip.otf);
+    src: url(media/fonts/ACFilmstrip.otf);
 }
 
 #evolvingPage {
@@ -17,12 +17,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
 }
 
 #homeline {
     font-family: filmstrip;
     font-size: 72px;
     z-index: 2;
+    color: black;
 }
 
 #evolving {
@@ -31,21 +33,23 @@
     text-align: center;
 }
 
-h2 {
+#evolvingPage h2 {
     font-family: sacra;
     font-size: 40px;
 }
 
-p {
+#evolvingPage.modal p {
     font-size: 20px;
 }
 
 #infocontainer {
+    margin: auto;
     width: 400px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 30px;
     text-align: center;
     z-index: 3;
+    position: relative;
 }
 
 .slide-in {
@@ -108,7 +112,7 @@ p {
     }
 }
 
-img {
+.evolvingimg {
     width: 350px;
     height: 350px;
     object-fit: contain;
