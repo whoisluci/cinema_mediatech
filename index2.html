@@ -110,18 +110,32 @@
 
   <div id="reviewsPage" class="hidden">
     <!-- Reviews Page Content -->
-    <h1>Movie Reviews</h1>
-    <div class="review-container">
-      <div class="review">
-        <h2>Movie Title 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit....</p>
-      </div>
-      <div class="review">
-        <h2>Movie Title 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit....</p>
-      </div>
-      <!-- Add more reviews as needed -->
-    </div>
+    <div id="wrapper">
+        <div class="container">
+          <div class="horizontal"><img src="media/images/IMG_8380.jpg"></div>
+          <div class="horizontal"><img src="media/images/IMG_8381.jpg"></div>
+          <div class="horizontal"><img src="media/images/IMG_8382.jpg"></div>
+          <div class="horizontal"><img src="media/images/IMG_8383.jpg"></div>
+          <div class="horizontal"><img src="media/images/IMG_8384.jpg"></div>
+          <div class="horizontal"><img src="media/images/IMG_8385.jpg"></div>
+          <div class="horizontal"><img src="media/images/IMG_8386.jpg"></div>
+          <div class="horizontal"><img src="media/images/IMG_8387.jpg"></div>
+          <div class="horizontal"><img src="media/images/IMG_8388.jpg"></div>
+        </div>
+      
+        <h1>
+          <span>Wanna pay for that? ItÂ´s not a vibe, let it DIE!</span>
+        </h1>
+        
+        <div id="filter">
+          <div class='outer-scratch'>
+            
+          <div class="inner-scratch">
+            <div class="background grain"></div>
+          </div>
+        </div>
+      </div>     
+    </div>  
   </div>
 
   <!-- Events Page Content -->
@@ -201,9 +215,9 @@
         <img class="evolvingimg" src="media/images/burger.png" alt="Image 4">
     </div>
 
-    <div class="slide-in middle-bottom" id="doorPNG">
+    <div class="slide-in middle-bottom" id="doorPNG" onclick="showPage('vibePage')">
         <img class="door closed" src="media/images/doorclosed.jpg" alt="closed door">
-        <img class="door open" src="media/images/dooropen.png" alt="closed door">
+        <!-- <img class="door open" src="media/images/dooropen.png" alt="closed door"> -->
     </div>
     
     <div class="popcorn-container">
@@ -233,9 +247,11 @@
     }
 
     // Call showPage function with 'homePage' on page load
-    window.onload = function() {
-      showPage('homePage');
-    };
+    // Call showPage function with 'homePage' when the DOM content is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  showPage('homePage');
+});
+
   </script>
 </body>
 </html>
