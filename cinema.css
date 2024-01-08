@@ -62,10 +62,10 @@ color: black;
   }
 
 #moviecontainer {
-  height: 250px;
+  height: 270px;
   overflow: hidden; 
   display: grid;
-  grid-template-columns: 180px 180px 1fr 100px;
+  grid-template-columns: 250px 200px 1fr 150px;
 }
 
 #moviescreen {
@@ -75,6 +75,7 @@ color: black;
   object-position: bottom;
   border-radius: 0 0 10px 10px;
   grid-column: 3;
+  grid-row: 1;
   background:var(--url) no-repeat;
   background-size: contain;
 } 
@@ -84,7 +85,7 @@ color: black;
   object-fit: cover ;
   object-position: bottom;
   border-radius: 0 0 10px 10px;
-  grid-column: 2;
+  grid-column: 1;
   margin: auto;
   animation: glow 1s ease-in-out infinite alternate;
   cursor: pointer;
