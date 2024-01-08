@@ -7,7 +7,7 @@
   }
   
   /* Add some content at the bottom of the video/page */
-  .title {
+  #eventsPage .title {
     position: fixed;
     top: 0;
     left: 0;
@@ -58,7 +58,7 @@
     box-shadow: 8px 5px 0px #fff;
   }
 
-  html, body {
+  #eventsPage {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -117,3 +117,8 @@
     bottom: -850px;
 }
 
+
+#eventsPage h1 {
+    font-size: 40px;
+    padding: 0;
+}

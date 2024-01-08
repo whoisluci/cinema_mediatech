@@ -86,9 +86,11 @@ color: black;
   object-position: bottom;
   border-radius: 0 0 10px 10px;
   grid-column: 1;
-  margin: auto;
   animation: glow 1s ease-in-out infinite alternate;
   cursor: pointer;
+  position: relative;
+  right: -225px;
+  top: 25px;
 }
 
 #exitSign img {
