@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="events.css">
   <link rel="stylesheet" href="evolving.css">
   <link rel="stylesheet" href="cinema.css">
+  <link rel="stylesheet" href="vibe.css">
   <style>
     /* Add your common styles here */
     .hidden {
@@ -22,8 +23,6 @@
   <!-- Button Section -->
   <div id="buttons">
     <button onclick="showPage('homePage')">Home</button>
-    <button onclick="showPage('netflixPage')">Netflix</button>
-    <button onclick="showPage('reviewsPage')">Reviews</button>
   </div>
 
   <!-- Page Content Section -->
@@ -77,12 +76,12 @@
           <div id="trendingNow">
             <h1 id="myList">Trending Now</h1>
             <div class="box">
-              <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t2.PNG?raw=true" alt=""></a>
-              <a class="textbox" href=""><p>It´s becoming more normal that new movies releases on streaming sites the same day they have premiere</p></a>
-              <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t3.PNG?raw=true" alt=""></a>
+              <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t2.PNG?raw=true" alt=""></a>
+              <a class="textbox" href="#"><p>It´s becoming more normal that new movies releases on streaming sites the same day they have premiere</p></a>
+              <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t3.PNG?raw=true" alt=""></a>
               <a class="textbox" href=""><p>Netflix has around 238.4 million subscribers</p></a>
-              <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t5.PNG?raw=true" alt=""></a>
-              <a class="textbox" href=""><p>The movie "Luca" was released on Disney+ during Covid and therefore was not in theaters, it still was one of the most successful movie releases</p></a>  
+              <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t5.PNG?raw=true" alt=""></a>
+              <a class="textbox" href="#"><p>The movie "Luca" was released on Disney+ during Covid and therefore was not in theaters, it still was one of the most successful movie releases</p></a>  
             </div>     
           </div>
         </div>
@@ -227,11 +226,80 @@
 
 
   <div id="vibePage" class="hidden">
-    Content blablabla
-  </div>
-
-
-
+    <div id="wrapper">
+    <div class="screenboard">
+        <h1 class="screenboard-screenname">Screen 1</h1>
+        <ul class="movielist">
+          <li class="movielist-movie">
+            <div class="movielist-movie-title"><span>It&apos;s a vibe</span></div>
+            <div class="movielist-movie-desc"><span>The community won&apos;t die!</span></div>
+          </li>
+          <li class="movielist-movie">
+            <div class="movielist-movie-title"><span></span></div>
+            <div class="movielist-movie-desc"><span>Experience movies on a grand screen with powerful sound, providing an immersive and intense film experience</span></div>
+          </li>
+          <li class="movielist-movie">
+            <div class="movielist-movie-title"><span></span></div>
+            <div class="movielist-movie-desc"><span></span></div>
+          </li>
+          <li class="movielist-movie">
+            <div class="movielist-movie-title"><span></span></div>
+            <div class="movielist-movie-desc"><span></span></div>
+          </li>
+        </ul>
+      </div> <!-- /.screenboard -->
+      
+      <div class="screenboard monochrome">
+        <h1 class="screenboard-screenname">Screen 2</h1>
+        <ul class="movielist">
+          <li class="movielist-movie">
+            <div class="movielist-movie-title"><span>Letterboxd</span></div>
+            <div class="movielist-movie-desc"><span></span></div>
+          </li>
+          <li class="movielist-movie">
+            <div id="LetterboxdPNG">
+                <img id="logo" src="media/images/letterboxd_logo.png">
+            </div>
+            <div class="movielist-movie-desc"><span>
+              A website that offers the opportunity to talk about movies and participate in film culture, contributing to the excitement and joy surrounding film. And a sense of community by bringing together individuals with similar interests</span></div>
+          </li>
+          <li class="movielist-movie">
+            <div class="movielist-movie-title"><span></span></div>
+            <div class="movielist-movie-desc"><span></span></div>
+          </li>
+          <li class="movielist-movie">
+            <div class="movielist-movie-title"><span></span></div>
+            <div class="movielist-movie-desc"><span></span></div>
+          </li>
+        </ul>
+      </div> <!-- /.screenboard.monochrome -->
+      
+      <div class="screenboard gold-on-black">
+        <h1 class="screenboard-screenname">Screen 3</h1>
+        <ul class="movielist">
+          <li class="movielist-movie">
+            <div class="movielist-movie-title"><span>To prevent cinemas</span></div>
+            <div class="movielist-movie-desc"><span>from fading away</span></div>
+          </li>
+          <li class="movielist-movie">
+            <div class="movielist-movie-title"><span></span></div>
+            <div class="movielist-movie-desc"><span>It is crucial for cinemas to adapt to changing trends and technologies. By offering unique and exclusive experiences, such as premium services, special screenings, and events, cinemas can attract a wider audience
+    
+            </span></div>
+          </li>
+          <li class="movielist-movie">
+            <div class="movielist-movie-title"><span></span></div>
+            <div class="movielist-movie-desc"><span></span></div>
+          </li>
+          <li class="movielist-movie">
+            <div class="movielist-movie-title"><span></span></div>
+            <div class="movielist-movie-desc"><span></span></div>
+          </li>
+        </ul>
+        <div class="spotlight spot1"></div>
+        <div class="spotlight spot2"></div>
+      </div> <!-- /.screenboard.gold-on-black -->
+      </div>
 
   <script src="evolving.js"></script>
   <script src="index.js"></script>

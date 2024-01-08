@@ -640,6 +640,7 @@
   
   .box a {
 	transition: transform .3s;  
+	cursor: not-allowed;
   }
   
   .box a:hover {
@@ -833,3 +834,4 @@
   .outer-container {
 	height: 100vh;
   }
+

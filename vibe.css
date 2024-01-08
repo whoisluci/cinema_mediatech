@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Limelight|Roboto+Condensed:700');
+
+HTML {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#vibePage {
+  
+  background-image: url(media/images/filmrulle.jpg);
+  background-attachment: fixed;
+  text-align: center;
+  height: 100vh;
+}
+
+.screenboard {
+  color: #000;
+  display: inline-block;
+  line-height: 1;
+  margin: 0 1em 1em 0;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 250px;
+  z-index: 0;
+}
+.screenboard::before,
+.screenboard::after {
+  border: 2px outset #f00;
+  bottom: 50%;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .75);
+  content: '';
+  position: absolute;
+  z-index: -2;
+}
+.screenboard::before {
+  left: .5em;
+  right: .5em;
+  top: .5em;
+}
+.screenboard::after {
+  left: 1em;
+  right: 1em;
+  top: 1em;
+}
+.screenboard-screenname {
+  background-color: #ffc;
+  border: 5px outset #f00;
+  border-radius: .5em .5em 0 0;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .75);
+  display: block;
+  font-family: 'Limelight', cursive;
+  font-size: 2em;
+  margin: 1.25em .75em -5px;
+  padding: .25em;
+  position: relative;
+}
+.screenboard-screenname::before,
+.screenboard-screenname::after {
+  background-color: #ffc;
+  border: 5px outset #f00;
+  border-radius: .5em .5em 0 0;
+  bottom: -5px;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .75);
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+.screenboard-screenname::before {
+  height: 2.5em;
+  margin-right: -1.5em;
+  right: 50%;
+  width: 3em;
+}
+.screenboard-screenname::after {
+  height: 3em;
+  left: 50%;
+  margin-left: -.5em;
+  width: 1em;
+}
+
+.movielist {
+  background-color: #ffc;
+  border: 5px outset #f00;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .75);
+  font-family: 'Roboto Condensed', sans-serif;
+  list-style-type: none;
+  padding: 1em 0;
+  position: relative;
+  margin: 0;
+  z-index: 1;
+}
+.movielist-movie {
+  list-style-type: none;
+  margin: 0;
+  padding: .5em 0 0;
+}
+.movielist-movie:first-child {
+  padding: 0;
+}
+.movielist-movie-title,
+.movielist-movie-desc {
+  border-bottom: 1px solid rgba(0, 0, 0, .25);
+  border-top: 1px solid rgba(0, 0, 0, .25);
+  height: .5em;
+  margin-bottom: .75em;
+  margin-top: .75em;
+}
+.movielist-movie-title {
+  font-size: 1.5em;
+}
+.movielist-movie-title SPAN,
+.movielist-movie-desc SPAN {
+  display: block;
+  margin-top: -.25em;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* monochrome colour scheme */
+.monochrome.screenboard::before,
+.monochrome.screenboard::after {
+  border-color: #333;
+}
+.monochrome .screenboard-screenname,
+.monochrome .screenboard-screenname::before,
+.monochrome .screenboard-screenname::after,
+.monochrome .movielist {
+  background-color: #eee;
+  border-color: #333;
+}
+
+/* gold-on-black colour scheme */
+.gold-on-black.screenboard::before,
+.gold-on-black.screenboard::after {
+  border-color: #ffd700; /* gold */
+}
+.gold-on-black .screenboard-screenname {
+  color: #ffd700; /* gold */
+}
+.gold-on-black .screenboard-screenname,
+.gold-on-black .screenboard-screenname::before,
+.gold-on-black .screenboard-screenname::after {
+  background-color: #000;
+  border-color: #ffd700; /* gold */
+}
+.gold-on-black .movielist {
+  border-color: #ffd700; /* gold */
+}
+/* 
+
+.spot1 { left: 40%; -webkit-animation: move 10s infinite;}
+.spot2 { left: 60%; -webkit-animation: move2 10s infinite;} */
+#vibePage.spotlight {
+  margin:auto;
+  top: 0;
+  left: 0;
+  position: absolute;
+	width: 200px;
+	height: 50px;
+  border-top: 800px solid rgba(255,255,255,0.25);
+  border-left: 40px solid transparent;
+  border-bottom: 0px solid #575;
+  border-right: 40px solid transparent;
+  background-color: transparent;
+  /* -webkit-transform-origin: 50% 100% 0; */
+  z-index: 0;
+  /*-webkit-transition-timing: ease-in-out;*/
+}
+/* 
+ @-webkit-keyframes move {
+  0%  { 
+    -webkit-transform: rotate(30deg);
+  }
+  50% {
+    -webkit-transform: rotate(-30deg);
+  }
+  100% {
+    -webkit-transform: rotate(30deg);
+  }
+}
+
+ @-webkit-keyframes move2 {
+  0%  { 
+    -webkit-transform: rotate(-30deg);
+  }
+  50% {
+    -webkit-transform: rotate(30deg);
+  }
+  100% {
+    -webkit-transform: rotate(-30deg);
+  } */
+
+#text {
+  position: absolute;
+  left: 48%;
+  top: 25%;
+  z-index: 999;
+  color: rgba(255,255,255,0.15);
+}
+
+#wrapper{
+  width: 100vh;
+}
+
+#LetterboxdPNG img {
+  max-width: 50%;
+}
+
+.screenboard-screenname {
+  color: black;
+}

@@ -38,7 +38,7 @@
     animation: grain 0.5s steps(1) infinite;
 }
 /* Basic Title */
-h1 {
+#reviewsPage h1 {
     width: 100%;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
@@ -50,12 +50,12 @@ h1 {
     grid-row: 1;
     grid-column: 1 / 9;
 }
-h1 span {
+#reviewsPage h1 span {
     display: inline-block;
     position: relative;
     padding: 0.5em 1em;
 }
-h1 span:before {
+#reviewsPage h1 span:before {
     display: block;
     content: '';
     width: 110%;
@@ -65,7 +65,7 @@ h1 span:before {
     -webkit-animation: 2.5s draw;
     animation: 2.5s draw;
 }
-h1 span:after {
+#reviewsPage h1 span:after {
     display: block;
     content: '';
     position: absolute;
