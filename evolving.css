@@ -43,13 +43,16 @@
 }
 
 #infocontainer {
-    margin: auto;
-    width: 400px;
+    position: absolute; /* Change to absolute positioning */
+    top: 50%; /* Set top to 50% */
+    left: 50%; /* Set left to 50% */
+    transform: translate(-50%, -50%); /* Use transform to center the element */
     background: rgba(255, 255, 255, 0.7);
     border-radius: 30px;
     text-align: center;
     z-index: 3;
-    position: relative;
+    padding: 20px; /* Add padding for better appearance */
+    width: 45vh;
 }
 
 .slide-in {
@@ -84,6 +87,8 @@
     animation-name: slideBottomRight;
 }
 
+
+
 @keyframes slideTopLeft {
     to {
         left: 0;
@@ -111,6 +116,14 @@
         bottom: 0;
     }
 }
+
+@keyframes slideBottomUp {
+    to {
+        bottom: 0; /* Slide the door up to the bottom */
+        transform: translateY(0); /* Reset the transform to avoid unexpected behavior */
+    }
+}
+
 
 .evolvingimg {
     width: 350px;
@@ -184,3 +197,39 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Update the CSS for the door elements */
+#doorPNG {
+    width: 100px;
+    height: 200px;
+    object-fit: contain;
+    position: absolute;
+    z-index: 2;
+    left: 65%; /* Center the door horizontally */
+    bottom: -100%; /* Initially position it below the viewport */
+    transform: translateX(-50%); /* Center the door horizontally using transform */
+    animation-name: slideBottomUp; /* Use the updated animation name */
+    animation-duration: 1.5s; /* Set the animation duration */
+    animation-timing-function: ease-out; /* Set the animation timing function */
+    animation-fill-mode: forwards; /* Keep the final state of the animation */
+    cursor: pointer;
+}
+
+
+/* Initially hide the open door */
+.door.closed {
+    position: relative;
+    transition: opacity 1s;
+    z-index: 1;
+}
+
+/* Show the open door on hover and click
+.closed:hover {
+    opacity: 0;
+}
+
+.open {
+   position: absolute;
+   z-index: 0;
+}
+ */

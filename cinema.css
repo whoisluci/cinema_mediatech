@@ -1,3 +1,10 @@
+#cinemaPage {
+  background-image: url("media/images/crowdedcinema.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 100vh;
+}
 
 #bubblecontainer {
   height: 100%;
@@ -80,6 +87,7 @@ color: black;
   grid-column: 2;
   margin: auto;
   animation: glow 1s ease-in-out infinite alternate;
+  cursor: pointer;
 }
 
 #exitSign img {
@@ -106,3 +114,4 @@ color: black;
       filter: drop-shadow(0 0 5px #04a454) drop-shadow(0 0 5px #7cd4a4);
   }
 }
+

@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="reviews.css">
   <link rel="stylesheet" href="events.css">
   <link rel="stylesheet" href="evolving.css">
+  <link rel="stylesheet" href="cinema.css">
   <style>
     /* Add your common styles here */
     .hidden {
@@ -70,7 +71,7 @@
             </p>
             <div class="get-started">
               <input type="text" name="" id="" placeholder="Email address" />
-              <a href="" class="btn-lg">Get started <i class="fas fa-chevron-right"></i></a>
+              <a href="#" class="btn-lg" onclick="showPage('cinemaPage')">Get started <i class="fas fa-chevron-right"></i></a>
             </div>
           </div>
           <div id="trendingNow">
@@ -87,6 +88,23 @@
         </div>
         <div class="overlay"></div>
       </header>   
+    </div>
+  </div>
+
+  <div id="cinemaPage" class="hidden"> 
+    <div id="moviecontainer">
+        <video id="moviescreen" controls autoplay loop>
+            <source src="media/images/pexels-cottonbro-9208700 (2160p).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="exitSign" onclick="showPage('reviewsPage')">
+            <img id="exitSignPNG" src="media/images/emergency_exit_sign.png">
+        </div>
+    </div>
+    <div id="bubblecontainer">
+        <div id="bubble1"><img src="media/images/bubble.webp" alt="bubble" class="bubblebox" id="bubblesmall"><p>omg SHUT UP!</p></div>
+        <div id="bubble2"><img src="media/images/bubble2.png" alt="bubble" class="bubblebox"><p>I don´t get it, do you get it? <br> I´m not following! <br> Why did he do that?</p></div>
+        <div id="bubble3"><img src="media/images/bubble.webp" alt="bubble" class="bubblebox"> <p>I wanna pee <br> but I don´t wanna <br> miss anything</p></div>
     </div>
   </div>
 
@@ -182,11 +200,23 @@
     <div class="slide-in bottom-right" onclick="openModal('modal4')">
         <img class="evolvingimg" src="media/images/burger.png" alt="Image 4">
     </div>
+
+    <div class="slide-in middle-bottom" id="doorPNG">
+        <img class="door closed" src="media/images/doorclosed.jpg" alt="closed door">
+        <img class="door open" src="media/images/dooropen.png" alt="closed door">
+    </div>
     
     <div class="popcorn-container">
         <div class="popcorn"></div>
     </div>
   </div>
+
+
+  <div id="vibePage" class="hidden">
+    Content blablabla
+  </div>
+
+
 
 
   <script src="evolving.js"></script>
