@@ -215,13 +215,6 @@
     cursor: pointer;
 }
 
-#nextRoom {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 /* Initially hide the open door */
 .door.closed {
