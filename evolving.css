@@ -7,6 +7,7 @@
     src: url(media/fonts/ACFilmstrip.otf);
 }
 
+
 #evolvingPage {
     background-image: url("media/images/movieposters.png");
     background-size: 100%;
@@ -203,7 +204,6 @@
     width: 100px;
     height: 200px;
     object-fit: contain;
-    position: absolute;
     z-index: 2;
     left: 65%; /* Center the door horizontally */
     bottom: -100%; /* Initially position it below the viewport */
