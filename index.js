@@ -56,4 +56,8 @@ document.addEventListener('keydown', function (event) {
     }
   }
 
- 
+  function showWarning() {
+    window.alert("To open the curtains press enter");
+  }
+
+  window.onload = showWarning;
