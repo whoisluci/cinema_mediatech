@@ -633,8 +633,9 @@
   
   .box {
 	display: grid;
-	grid-gap: 20px;
+	grid-gap: 5px;
 	grid-template-columns: repeat(6, minmax(100px, 1fr));
+	margin: 20px;
   }
   
   .box a {
@@ -650,6 +651,23 @@
   
   .box img {
 	border-radius: 2px;
+  }
+
+.textbox {
+	background-color: #e50914;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+  .textbox p {
+	text-align: center;
+	padding: 2px;
+  }
+
+  #myList {
+	font-size: 40px;
+	margin: 10px;
   }
   
   /* LINKS */
